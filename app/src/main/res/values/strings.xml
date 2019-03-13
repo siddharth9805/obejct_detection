@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Imagedetector</string>
+    <string name="app_name">Object Detection</string>
+
+    <string name="file_limit_size_upload_format">Files must be less than %sMB</string>
 </resources>
