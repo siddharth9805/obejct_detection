@@ -36,10 +36,14 @@ public class PhotoVideoRedirectActivity extends AppCompatActivity {
 
         ImageView imgShow = (ImageView) findViewById(R.id.imgShow);
         videoView = (VideoView) findViewById(R.id.vidShow);
+        ImageView imgFlashOnOff = (ImageView) findViewById(R.id.imgFlashOnOff);
+        ImageView imgSwipeCamera = (ImageView) findViewById(R.id.imgChangeCamera);
 
         if(getIntent().getStringExtra("WHO").equalsIgnoreCase("Image")){
 
             imgShow.setVisibility(View.VISIBLE);
+            imgFlashOnOff.setVisibility(View.INVISIBLE);
+            imgSwipeCamera.setVisibility(View.INVISIBLE);
 
             Glide.with(PhotoVideoRedirectActivity.this)
                     .load(getIntent().getStringExtra("PATH"))

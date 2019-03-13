@@ -294,8 +294,8 @@ public class CameraActivity extends AppCompatActivity implements SurfaceHolder.C
             super.onPreExecute();
             imgCapture.setOnTouchListener(null);
             textCounter.setVisibility(View.GONE);
-            imgSwipeCamera.setVisibility(View.VISIBLE);
-            imgFlashOnOff.setVisibility(View.VISIBLE);
+            imgSwipeCamera.setVisibility(View.INVISIBLE);
+            imgFlashOnOff.setVisibility(View.INVISIBLE);
 
         }
 
@@ -400,6 +400,8 @@ public class CameraActivity extends AppCompatActivity implements SurfaceHolder.C
         activeCameraCapture();
 
         imgFlashOnOff.setOnClickListener(this);
+        imgSwipeCamera.setVisibility(View.GONE);
+        imgFlashOnOff.setVisibility(View.INVISIBLE);
 
 
     }
@@ -458,6 +460,7 @@ public class CameraActivity extends AppCompatActivity implements SurfaceHolder.C
             mediaRecorder.reset();   // clear recorder configuration
             mediaRecorder.release(); // release the recorder object
             mediaRecorder = new MediaRecorder();
+
         }
     }
 
